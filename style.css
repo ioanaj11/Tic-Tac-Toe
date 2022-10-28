@@ -1,0 +1,172 @@
+html, body{
+    margin:0;
+    background-color: rgb(70, 69, 69);
+}
+
+h1{
+    color:rgb(155, 155, 228);
+    text-align: center;
+    font-size: 80px;
+    animation: appear 1s;
+    font-family: 'Pacifico', cursive;
+    margin-top: -5px;
+}
+
+@keyframes appear{
+    0% {font-size: 5px};
+    100% {font-size: 80px}
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+.gameArea{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:3px double;
+    border-radius: 5px;
+    padding: 30px 70px;
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(155, 228, 218);
+    background-color: rgb(87, 84, 84);
+    animation: increaseForm 1s;
+}
+
+@keyframes increaseForm{
+    0% {font-size:10px};
+    100%{font-size: 30px};
+}
+form>button{
+    width: 190px;
+    padding: 10px 20px;
+    background-color: rgb(155, 228, 218);
+    margin-top: 50px;
+    animation: increaseForm 1s;
+    border-radius: 15px;
+}
+
+form>label{
+    font-family: 'Pacifico', cursive;
+}
+
+form>button:hover{
+    transform: scale(1.05);
+    background-color: rgb(123, 192, 183);
+}
+
+form>input{
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: rgb(71, 70, 70);
+    animation: increaseForm 1s;
+}
+
+form>select{
+    width: 150px;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(71, 70, 70);
+    border-radius: 5px;
+    animation: increaseForm 1s;
+    margin-bottom: 10px;
+}
+
+.gameBoard{
+    display: grid;
+    grid-template-columns: 180px 180px 180px;
+    grid-template-rows: 180px 180px 180px;
+    gap:4px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 195, 195);
+    animation: increaseBoard 2s;
+}
+
+@keyframes increaseBoard{
+    0% {width: 30px; height:30px}
+    100% {width:548px; height:548px}
+}
+
+.boxes{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(70, 69, 69);
+    height: 180px;
+    width: 180px;
+    font-size: 150px;
+    color: #fff;
+}
+
+.players1, .players2{
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    font-weight:500;
+    margin: 0px 20px 5px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    color: rgb(155, 228, 218);
+}
+
+.players1{
+    animation: moveButton 1s;
+}
+
+@keyframes moveButton{
+    0% {margin-right: 100px;}
+    100%{margin-right: 20px;}
+}
+
+p{
+    margin: 0;
+}
+
+button, input{
+    font-size: 25px;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(235, 226, 226);
+    border-radius: 5px;
+    color: rgb(70, 69, 69);
+    font-weight: 600;
+}
+
+.active{
+    border: 3px solid;
+    border-color: black;
+    background-color: rgb(162, 241, 97);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:600;
+    font-size: 35px;
+    color: rgb(162, 241, 97);
+    margin-top: 50px;
+    animation: increaseSize 2s;
+}
+
+@keyframes increaseSize{
+    0% {font-size: 5px;};
+   100% {font-size: 35px;};
+}
