@@ -9,6 +9,12 @@ playerSelection.addEventListener('click', ()=>{
         player2.setAttribute('id','player2Name');
         }
         else {
+            const firstSelection=document.querySelector('input:last-of-type');
+            if (firstSelection.id ==="player1"){
+
+            const selection=document.querySelector('select');
+            selection.removeAttribute('id');
+            
             const player2Name=document.createElement('input');
             player2Name.setAttribute('type','text');
             player2Name.setAttribute('id','player2Name');
@@ -16,7 +22,7 @@ playerSelection.addEventListener('click', ()=>{
 
             const startBtn=document.querySelector('.startBtn')
             form.insertBefore(player2Name, startBtn);
-        }
+        }}
 })
 
 function getPlayers(){
